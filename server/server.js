@@ -25,7 +25,7 @@ app.use(cors());
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
-app.use("sales", salesRoutes);
+app.use("/sales", salesRoutes);
 
 // Mongoose Setup
 const PORT = process.env.PORT || 8000;
@@ -34,6 +34,6 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Listening on port ${PORT}..`));
     // ONLY ADD DATA ONE TIME
-    User.insertMany(dataUser);
+    // User.insertMany(dataUser);
   })
   .catch((error) => console.log(`${error} did not connect`));
