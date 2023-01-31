@@ -10,7 +10,9 @@ const salesRoutes = require("./routes/sales.router");
 require("dotenv").config();
 //Data imports
 const User = require("./models/User");
-const { dataUser } = require("./data/index");
+const Product = require("./models/Product");
+const ProductStat = require("./models/ProductStat");
+const { dataUser, dataProduct, dataProductStat } = require("./data/index");
 
 // Configuration
 const app = express();
@@ -35,5 +37,7 @@ mongoose
     app.listen(PORT, () => console.log(`Listening on port ${PORT}..`));
     // ONLY ADD DATA ONE TIME
     // User.insertMany(dataUser);
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
   })
   .catch((error) => console.log(`${error} did not connect`));
