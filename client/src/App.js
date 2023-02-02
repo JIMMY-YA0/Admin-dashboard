@@ -6,6 +6,7 @@ import Layout from "pages/layout/index";
 import Dashboard from "pages/dashboard";
 import Products from "pages/products";
 import Customers from "pages/customers";
+import Transactions from "pages/transactions";
 import { useMemo } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/products" element={<Products />} />
               <Route path="/customers" element={<Customers />} />
+              <Route path="/transactions" element={<Transactions />} />
             </Route>
           </Routes>
         </ThemeProvider>

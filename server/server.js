@@ -12,7 +12,8 @@ require("dotenv").config();
 const User = require("./models/User");
 const Product = require("./models/Product");
 const ProductStat = require("./models/ProductStat");
-const { dataUser, dataProduct, dataProductStat } = require("./data/index");
+const Transaction = require("./models/Transaction");
+const { dataUser, dataProduct, dataProductStat, dataTransaction } = require("./data/index");
 
 // Configuration
 const app = express();
@@ -39,5 +40,6 @@ mongoose
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
   })
   .catch((error) => console.log(`${error} did not connect`));
