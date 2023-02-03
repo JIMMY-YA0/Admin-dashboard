@@ -13,7 +13,14 @@ const User = require("./models/User");
 const Product = require("./models/Product");
 const ProductStat = require("./models/ProductStat");
 const Transaction = require("./models/Transaction");
-const { dataUser, dataProduct, dataProductStat, dataTransaction } = require("./data/index");
+const OverallStat = require("./models/OverallStat");
+const {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+  dataOverallStat,
+} = require("./data/index");
 
 // Configuration
 const app = express();
@@ -41,5 +48,6 @@ mongoose
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataTransaction);
   })
   .catch((error) => console.log(`${error} did not connect`));
