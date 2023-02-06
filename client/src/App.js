@@ -11,6 +11,7 @@ import Overview from "pages/overview";
 import Daily from "pages/daily";
 import Monthly from "pages/monthly";
 import Breakdown from "pages/breakdown";
+import Admin from "pages/admin";
 import { useMemo } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
@@ -33,6 +34,7 @@ function App() {
               <Route path="/daily" element={<Daily />} />
               <Route path="/monthly" element={<Monthly />} />
               <Route path="/breakdown" element={<Breakdown />} />
+              <Route path="/admin" element={<Admin />} />
             </Route>
           </Routes>
         </ThemeProvider>
