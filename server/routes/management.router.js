@@ -1,5 +1,6 @@
 const express = require("express");
+const { getAdmins } = require("../controllers/management.controller");
+const router = express.Router();
 
-const managementRouter = express.Router();
-
-module.exports = managementRouter;
+router.get("/admins", getAdmins);
+module.exports = router;
