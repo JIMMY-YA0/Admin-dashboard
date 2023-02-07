@@ -28,11 +28,11 @@ const getDashboardStats = async (req, res) => {
     const { totalCustomers, yearlyTotalSoldUnits, yearlySalesTotal, monthlyData, salesByCategory } =
       overallStat[0];
 
-    const thisMonthStats = OverallStatDabase[0].monthlyData.find(({ month }) => {
+    const thisMonthStats = overallStat[0].monthlyData.find(({ month }) => {
       return month === currentMonth;
     });
 
-    const todayStats = OverallStatDabase[0].dailyData.find(({ date }) => {
+    const todayStats = overallStat[0].dailyData.find(({ date }) => {
       return date === currentDay;
     });
 
