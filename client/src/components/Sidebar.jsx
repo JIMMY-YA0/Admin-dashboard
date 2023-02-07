@@ -80,10 +80,6 @@ const navItems = [
     text: "Admin",
     icon: <AdminPanelSettingsOutlined />,
   },
-  {
-    text: "Performance",
-    icon: <TrendingUpOutlined />,
-  },
 ];
 
 const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile }) => {
@@ -175,9 +171,9 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
               })}
             </List>
           </Box>
-          <Box postion="absolute" bottom="2rem">
-            <Divider />
-            <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+          <Box mt="2rem">
+            <Divider bottom="4rem" />
+            <FlexBetween textTransform="none" gap="1rem" m="5rem 2rem 0 3rem">
               <Box
                 component="img"
                 alt="profile"

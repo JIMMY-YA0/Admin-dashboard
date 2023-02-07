@@ -32,7 +32,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
   const handleClick = (event) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl;
+  const handleClose = () => setAnchorEl(null);
 
   return (
     <AppBar
@@ -124,7 +124,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
               onClose={handleClose}
               anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
             >
-              <MenuItem onClick={handleClose}>Log out</MenuItem>
+              <MenuItem onClick={handleClose}>Log Out</MenuItem>
             </Menu>
           </FlexBetween>
         </FlexBetween>
