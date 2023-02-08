@@ -4,6 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run dev --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/JIMMY-YA0/Admin-dashboard/issues"
   },
-  "homepage": "https://github.com/JIMMY-YA0/Admin-dashboard#readme"
+  "homepage": "https://github.com/JIMMY-YA0/Admin-dashboard#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
