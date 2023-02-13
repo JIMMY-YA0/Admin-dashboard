@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
 import { DownloadOutlined, Email, PointOfSale, PersonAdd, Traffic } from "@mui/icons-material";
@@ -12,6 +12,7 @@ import StatBox from "components/StatBox";
 const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
+  const [pageSize, setPageSize] = useState(10);
   const { data, isLoading } = useGetDashboardQuery();
 
   const columns = [
@@ -167,6 +168,9 @@ const Dashboard = () => {
             getRowId={(row) => row._id}
             rows={(data && data.transactions) || []}
             columns={columns}
+            rowsPerPageOptions={[10, 20]}
+            pageSize={pageSize}
+            onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
           />
         </Box>
       </Box>
