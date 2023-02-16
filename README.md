@@ -1,9 +1,5 @@
 # Installation
 
-## -Install MongoDB onto your computer
-
-# Installation
-
 - Install MongoDB onto your computer: [Installation Instructions](https://www.mongodb.com/docs/manual/administration/install-community/)
 - Add a .env file to the [`server`](/server/) directory. Inside add:
 
@@ -31,3 +27,11 @@ npm i
 ```env
 REACT_APP_BASE_URL=http://localhost:8000
 ```
+
+- Open a terminal and run these commands:
+
+```zsh
+npm run dev
+```
+
+- This should automatically open react, it may take a while to load...
